@@ -18,3 +18,11 @@ rm -rf ~/.local/state/nvim
 ```
 rm -rf ~/.cache/nvim
 ```
+### clone starter repo
+```
+git clone https://github.com/suvrajitray/lazy-nvim-config ~/.config/nvim
+```
+### start nvim
+```
+nvim
+```
