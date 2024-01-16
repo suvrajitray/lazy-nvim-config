@@ -26,3 +26,25 @@ git clone https://github.com/suvrajitray/lazy-nvim-config ~/.config/nvim
 ```
 nvim
 ```
+
+
+## windows OS
+
+### required
+```
+Remove-Item $env:LOCALAPPDATA\nvim -Recurse -Force
+```
+### optional but recommended
+```
+Remove-Item $env:LOCALAPPDATA\nvim-data -Recurse -Force
+```
+
+### clone starter repo
+```
+git clone https://github.com/suvrajitray/lazy-nvim-config $env:LOCALAPPDATA\nvim
+```
+### start nvim
+```
+nvim
+```
+
