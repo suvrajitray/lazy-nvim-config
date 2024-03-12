@@ -1,3 +1,15 @@
+function openWhichKeyInVisualMode()
+  vim.cmd("normal! gv")
+  local visualmode = vim.fn.visualmode()
+  if visualmode == "V" then
+    local startLine, endLine = vim.fn.line("v"), vim.fn.line(".")
+    vim.fn["VSCodeNotifyRange"]("whichkey.show", startLine, endLine, 1)
+  else
+    local startPos, endPos = vim.fn.getpos("v"), vim.fn.getpos(".")
+    vim.fn["VSCodeNotifyRangePos"]("whichkey.show", startPos[2], endPos[2], startPos[3], endPos[3], 1)
+  end
+end
+
 -- Better Navigation
 vim.api.nvim_set_keymap("n", "<C-j>", ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
 vim.api.nvim_set_keymap("x", "<C-j>", ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
@@ -8,6 +20,8 @@ vim.api.nvim_set_keymap("x", "<C-h>", ':call VSCodeNotify("workbench.action.navi
 vim.api.nvim_set_keymap("n", "<C-l>", ':call VSCodeNotify("workbench.action.navigateRight")<CR>', { silent = true })
 vim.api.nvim_set_keymap("x", "<C-l>", ':call VSCodeNotify("workbench.action.navigateRight")<CR>', { silent = true })
 
+vim.api.nvim_set_keymap("n", "<Space>", ':call VSCodeNotify("whichkey.show")<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<Space>", ":call v:lua.openWhichKeyInVisualMode()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gr", ':call VSCodeNotify("editor.action.goToReferences")<CR>', { silent = true })
 
 local keymap = vim.keymap
