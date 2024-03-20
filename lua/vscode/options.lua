@@ -1,4 +1,6 @@
 local opt = vim.opt
+-- Make backspace behave like normal
+opt.backspace = "indent,eol,start"
 
 -- sync with system clipboard
 opt.clipboard = "unnamedplus"

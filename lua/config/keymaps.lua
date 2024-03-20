@@ -20,5 +20,6 @@ keymap.set("n", "<C-o>", "<C-o>zz")
 keymap.set("n", "%", "%zz")
 keymap.set("n", "*", "*zz")
 keymap.set("n", "#", "#zz")
-
+keymap.set({ "n", "x", "v" }, "<Up>", "5k", { desc = "smart vertical up" })
+keymap.set({ "n", "x", "v" }, "<Down>", "5j", { desc = "smart vertical down" })
 keymap.set("n", "U", "<C-r>", { desc = "redo" })
