@@ -281,16 +281,68 @@ keymap.set(
 -- git and version control
 keymap.set("n", "<leader>ga", ':call VSCodeNotify("git.stage")<CR>', { silent = true, desc = "add stage" })
 keymap.set("n", "<leader>gb", ':call VSCodeNotify("git.checkout")<CR>', { silent = true, desc = "git checkout" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
-keymap.set("n", "<leader>g", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>gB", ':call VSCodeNotify("gitlens.openFileInRemote")<CR>', { silent = true, desc = "browse" })
+keymap.set("n", "<leader>gc", ':call VSCodeNotify("git.commit")<CR>', { silent = true, desc = "commit" })
+keymap.set("n", "<leader>gf", ':call VSCodeNotify("git.fetch")<CR>', { silent = true, desc = "fetch" })
+keymap.set("n", "<leader>gm", ':call VSCodeNotify("git.merge")<CR>', { silent = true, desc = "merge" })
+keymap.set("n", "<leader>gp", ':call VSCodeNotify("git.push")<CR>', { silent = true, desc = "push" })
+keymap.set("n", "<leader>gP", ':call VSCodeNotify("git.pull")<CR>', { silent = true, desc = "pull" })
 
+keymap.set(
+  "n",
+  "<leader>sh",
+  ':call VSCodeNotify("workbench.action.splitEditorDown")<CR>',
+  { silent = true, desc = "split horizontal" }
+)
+
+-- lsp and code actions
+keymap.set("n", "<leader>l;", ':call VSCodeNotify("editor.action.refactor")<CR>', { silent = true, desc = "refactor" })
+keymap.set("n", "<leader>la", ':call VSCodeNotify("editor.action.autoFix")<CR>', { silent = true, desc = "auto fix" })
+
+keymap.set(
+  "n",
+  "<leader>ld",
+  ':call VSCodeNotify("editor.action.revealDefinition")<CR>',
+  { silent = true, desc = "definition" }
+)
+
+keymap.set(
+  "n",
+  "<leader>lD",
+  ':call VSCodeNotify("editor.action.revealDeclaration")<CR>',
+  { silent = true, desc = "declaration" }
+)
+
+keymap.set(
+  "n",
+  "<leader>le",
+  ':call VSCodeNotify("workbench.actions.view.problems")<CR>',
+  { silent = true, desc = "Error" }
+)
+
+keymap.set(
+  "n",
+  "<leader>li",
+  ':call VSCodeNotify("editor.action.goToImplementation")<CR>',
+  { silent = true, desc = "go to implimentation" }
+)
+
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
+keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
 --keymap.set("n", "<leader>", ':call VSCodeNotify("")<CR>', { silent = true, desc = "" })
 
 -- paste without overwriting
