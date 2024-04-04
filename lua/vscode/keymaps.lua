@@ -10,7 +10,6 @@ function openWhichKeyInVisualMode()
   end
 end
 
--- Better Navigation
 local keymap = vim.keymap
 
 keymap.set("n", "<C-j>", ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
@@ -26,8 +25,11 @@ keymap.set("n", "<Space>", ':call VSCodeNotify("whichkey.show")<CR>', { noremap 
 keymap.set("x", "<Space>", ":call v:lua.openWhichKeyInVisualMode()<CR>", { noremap = true, silent = true })
 keymap.set("n", "gr", ':call VSCodeNotify("editor.action.goToReferences")<CR>', { silent = true })
 
-keymap.set({ "n", "x", "v" }, "<Up>", "5k", { desc = "smart vertical up" })
-keymap.set({ "n", "x", "v" }, "<Down>", "5j", { desc = "smart vertical down" })
+keymap.set({ "n", "x", "v" }, "<Up>", "5k", { desc = "move the cursor to five line up" })
+keymap.set({ "n", "x", "v" }, "<Down>", "5j", { desc = "move the cursor to five lines down" })
+keymap.set({ "n", "x", "v" }, "<Left>", "^", { desc = "move the cursor to first charactor of line" })
+keymap.set({ "n", "x", "v" }, "<Right>", "$", { desc = "move the cursor to last charactor of line" })
+
 keymap.set("n", "U", "<C-r>", { desc = "redo" })
 
 -- paste without overwriting
